@@ -37,35 +37,8 @@ public class Player1Controller : MonoBehaviour {
     // Make the player walk according to user input
     void WalkHandler()
     {
-
-        Vector3 pos = transform.position;
-
-        // Set x and z velocities to zero
-        rb.velocity = new Vector3(0, rb.velocity.y, 0);
-
-        // Distance ( speed = distance / time --> distance = speed * time)
-        float distance = walkSpeed * Time.deltaTime;
-
-        if (Input.GetKey(KeyCode.DownArrow)) {
-            pos.z -= walkSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.UpArrow))
-        {
-            pos.z += walkSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            pos.x -= walkSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            pos.x += walkSpeed * Time.deltaTime;
-        }
-
-        transform.position = pos;
+        rb.velocity = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, rb.velocity.y, Input.GetAxis("Vertical") * walkSpeed);
+      
     }
 
     // Check whether the player can jump and make it jump

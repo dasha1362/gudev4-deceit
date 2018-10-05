@@ -39,35 +39,8 @@ public class Player2Controller : MonoBehaviour
     void WalkHandler()
     {
 
-        Vector3 pos = transform.position;
+        rb.velocity = new Vector3(Input.GetAxis("P2_Horizontal") * walkSpeed, rb.velocity.y, Input.GetAxis("P2_Vertical") * walkSpeed);
 
-        // Set x and z velocities to zero
-        rb.velocity = new Vector3(0, rb.velocity.y, 0);
-
-        // Distance ( speed = distance / time --> distance = speed * time)
-        float distance = walkSpeed * Time.deltaTime;
-
-        if (Input.GetKey("s"))
-        {
-            pos.z -= walkSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey("w"))
-        {
-            pos.z += walkSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey("a"))
-        {
-            pos.x -= walkSpeed * Time.deltaTime;
-        }
-
-        if (Input.GetKey("d"))
-        {
-            pos.x += walkSpeed * Time.deltaTime;
-        }
-
-        transform.position = pos;
     }
 
     // Check whether the player can jump and make it jump
