@@ -80,7 +80,7 @@ public class Player2Controller : MonoBehaviour
         bool isGrounded = CheckGrounded();
 
         // Check if the player is pressing the jump key
-        if (jAxis > 0f)
+        if (Input.GetKey("f"))
         {
             // Make sure we've not already jumped on this key press
             if (!pressedJump && isGrounded)
