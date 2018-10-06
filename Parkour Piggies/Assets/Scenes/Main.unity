@@ -356,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 382140827}
   offset: {x: 0, y: 0, z: 0}
-  rotateSpeed: 0
+  rotateSpeed: 10
 --- !u!1 &1158436040
 GameObject:
   m_ObjectHideFlags: 0
@@ -602,6 +602,7 @@ GameObject:
   - component: {fileID: 1619018467}
   - component: {fileID: 1619018469}
   - component: {fileID: 1619018468}
+  - component: {fileID: 1619018470}
   m_Layer: 0
   m_Name: Player 2 camera
   m_TagString: Untagged
@@ -672,6 +673,20 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &1619018470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1619018466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7349f8755cb0144adab29c58f29ff31b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 1199544894}
+  offset: {x: 0, y: 0, z: 0}
+  rotateSpeed: 0
 --- !u!1001 &1624219302
 Prefab:
   m_ObjectHideFlags: 0
