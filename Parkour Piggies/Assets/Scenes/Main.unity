@@ -345,7 +345,7 @@ MonoBehaviour:
   healthImages: []
   healthSprites: []
   walkSpeed: 8
-  jumpSpeed: 35
+  jumpSpeed: 40
   gravityScale: 0.22
 --- !u!64 &523471354
 MeshCollider:
@@ -477,7 +477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 8
-  jumpSpeed: 35
+  jumpSpeed: 40
   gravityScale: 0.22
 --- !u!64 &1459434248
 MeshCollider:
