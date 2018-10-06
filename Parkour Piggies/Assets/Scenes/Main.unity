@@ -339,6 +339,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e4563b7ee9481439ef696e05901e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHearts: 10
+  startHearts: 10
+  currHearts: 0
+  healthImages: []
+  healthSprites: []
   walkSpeed: 8
   jumpSpeed: 35
   gravityScale: 0.22
