@@ -16,7 +16,7 @@ public class Camera1Controller : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
 	{
-		offset = target.position - transform.position;
+//		offset = target.position - transform.position;
 
 	}
 	
@@ -25,7 +25,7 @@ public class Camera1Controller : MonoBehaviour {
 	{
 		
 		transform.position = target.position - offset;
-		
+//		transform.rotation = Quaternion.Euler(target.rotation.x, 120, target.rotation.z);
 		transform.LookAt(target);
 	}
 }
