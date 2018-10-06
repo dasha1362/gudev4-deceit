@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Player2Controller : MonoBehaviour
 {
@@ -33,12 +34,12 @@ public class Player2Controller : MonoBehaviour
 
     void WalkHandler()
     {
-        moveDirection = new Vector3(Input.GetAxis("P2_Horizontal") * walkSpeed, 0f, Input.GetAxis("P2_Vertical") * walkSpeed); // or rb.velocity.y instead of 0f
+        moveDirection = new Vector3(Input.GetAxis("P2_Horizontal") * walkSpeed, moveDirection.y, Input.GetAxis("P2_Vertical") * walkSpeed); // or rb.velocity.y instead of 0f
     }
 
     void JumpHandler()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (cc.isGrounded && Input.GetButtonDown("Jump"))
         {
             moveDirection.y = jumpSpeed;
         }

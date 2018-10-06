@@ -33,12 +33,12 @@ public class Player1Controller : MonoBehaviour {
 
     void WalkHandler()
     {
-        moveDirection = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, 0f, Input.GetAxis("Vertical") * walkSpeed);
+        moveDirection = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, moveDirection.y, Input.GetAxis("Vertical") * walkSpeed);
     }
 
     void JumpHandler()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (cc.isGrounded && Input.GetButtonDown("Jump"))
         {
             moveDirection.y = jumpSpeed;
         }
