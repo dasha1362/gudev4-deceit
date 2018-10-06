@@ -1,7 +1,6 @@
 Parkour Piggies/Temp/UnityLockfile
 Parkour Piggies/Library/shadercompiler-UnityShaderCompiler\.exe0\.log
 Parkour Piggies/.vs
-*.meta
 *metadata/*
 
 [Ll]ibrary/
@@ -41,3 +40,4 @@ sysinfo.txt
 *.apk
 *.unitypackage
 >>>>>>> bc50aaea1821ccf511c2882d156ba0fc696d25a5
+.idea
