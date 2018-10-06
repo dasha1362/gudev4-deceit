@@ -6,11 +6,16 @@ using UnityEngine.EventSystems;
 public class Player1Controller : MonoBehaviour {
 
     public float walkSpeed = 8f;
-    public float jumpSpeed = 80f;
-    public float gravityScale = 0.05f;
+    public float jumpSpeed = 10f;
+    public float gravityScale = 0.25f;
+    //flag to keep track of whether a jump started
+    bool pressedJump = false;
 
     CharacterController cc;
     private Vector3 moveDirection;
+
+    Rigidbody rb;
+    Collider coll;
 
     void Start()
     {
@@ -28,7 +33,7 @@ public class Player1Controller : MonoBehaviour {
 
     void WalkHandler()
     {
-        moveDirection  = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, 0f, Input.GetAxis("Vertical") * walkSpeed);
+        moveDirection = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, 0f, Input.GetAxis("Vertical") * walkSpeed);
     }
 
     void JumpHandler()
@@ -38,7 +43,7 @@ public class Player1Controller : MonoBehaviour {
             moveDirection.y = jumpSpeed;
         }
 
-        moveDirection.y = moveDirection.y +  (Physics.gravity.y * gravityScale);
+        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
     }
 
 }
