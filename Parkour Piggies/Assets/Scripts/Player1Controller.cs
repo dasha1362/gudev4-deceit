@@ -2,19 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
-public class Player1Controller : MonoBehaviour
-{
-    public int maxHearts = 10;
-    public int startHearts = 10;
-    public int currHearts;
-    public Image[] healthImages;
-    public Sprite[] healthSprites;
+public class Player1Controller : MonoBehaviour {
 
-    public float walkSpeed;
-    public float jumpSpeed;
-    public float gravityScale;
+    public float walkSpeed = 8f;
+    public float jumpSpeed = 10f;
+    public float gravityScale = 0.25f;
     //flag to keep track of whether a jump started
     bool pressedJump = false;
 
@@ -27,7 +20,6 @@ public class Player1Controller : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
-        currHearts = startHearts;
     }
 
     void Update()
@@ -46,9 +38,13 @@ public class Player1Controller : MonoBehaviour
 
     void JumpHandler()
     {
-        if (cc.isGrounded && Input.GetButtonDown("Jump"))
+        if (cc.isGrounded)
         {
-            moveDirection.y = jumpSpeed;
+            moveDirection.y = 0f;
+            if (Input.GetButtonDown("Jump"))
+            {
+                moveDirection.y = jumpSpeed;    
+            }
         }
 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
