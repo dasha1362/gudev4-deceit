@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Player1Controller : MonoBehaviour {
 
@@ -47,8 +48,13 @@ public class Player1Controller : MonoBehaviour {
         Debug.Log("collided");
         if (collision.gameObject.tag == "CollectCarrot2")
         {
+            Debug.Log("trying to get carrot");
             Destroy(collision.gameObject);
             AddHealth();
+        } else if (collision.gameObject.tag == "NextLevel")
+        {
+            Debug.Log("trying to load");
+            SceneManager.LoadScene("Level2");
         }
     }
 

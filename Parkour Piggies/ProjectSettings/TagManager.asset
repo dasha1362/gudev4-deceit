@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CollectCarrot1
   - CollectCarrot2
+  - NextLevel
   layers:
   - Default
   - TransparentFX
