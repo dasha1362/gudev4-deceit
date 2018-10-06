@@ -33,7 +33,10 @@ public class Player1Controller : MonoBehaviour {
 
     void WalkHandler()
     {
-        moveDirection = new Vector3(Input.GetAxis("Horizontal") * walkSpeed, moveDirection.y, Input.GetAxis("Vertical") * walkSpeed);
+        float yStore = moveDirection.y;
+        moveDirection = transform.forward * Input.GetAxis("Vertical") + transform.right * Input.GetAxis("Horizontal");
+        moveDirection = moveDirection.normalized * walkSpeed;
+        moveDirection.y = yStore;
     }
 
     void JumpHandler()
