@@ -5,19 +5,24 @@ using UnityEngine;
 public class RotateTrigger : MonoBehaviour
 {
     public Camera1Controller camera;
+    public Vector3 newPosition;
+    public int degreesToTurn;
+    
 
-    private Vector3 oldPosition, newPosition;
+    private Vector3 oldPosition;
     private float interpolation;
     private bool shouldUpdate = false;
 
     // Use this for initialization
     void OnTriggerEnter(Collider other)
     {
-        other.gameObject.transform.rotation *= Quaternion.Euler(0, 270, 0);
-        oldPosition = camera.offset;
-        newPosition = new Vector3(0, -5, 20);
-        interpolation = 0.01F;
-        shouldUpdate = true;
+        if (camera.offset != newPosition)
+        {
+            other.gameObject.transform.rotation *= Quaternion.Euler(0, degreesToTurn, 0);
+            oldPosition = camera.offset;
+            interpolation = 0.01F;
+            shouldUpdate = true;            
+        }
     }
 
     void Update()
