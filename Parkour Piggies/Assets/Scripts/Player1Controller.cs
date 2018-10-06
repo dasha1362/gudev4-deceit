@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Player1Controller : MonoBehaviour
 {
+    public int maxHearts = 10;
+    public int startHearts = 10;
+    public int currHearts;
+    public Image[] healthImages;
+    public Sprite[] healthSprites;
 
     public float walkSpeed;
     public float jumpSpeed;
@@ -21,6 +27,7 @@ public class Player1Controller : MonoBehaviour
     void Start()
     {
         cc = GetComponent<CharacterController>();
+        currHearts = startHearts;
     }
 
     void Update()
