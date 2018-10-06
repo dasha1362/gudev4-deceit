@@ -39,9 +39,13 @@ public class Player2Controller : MonoBehaviour
 
     void JumpHandler()
     {
-        if (cc.isGrounded && Input.GetButtonDown("P2_Jump"))
+        if (cc.isGrounded)
         {
-            moveDirection.y = jumpSpeed;
+            moveDirection.y = 0f;
+            if (Input.GetButtonDown("P2_Jump"))
+            {
+                moveDirection.y = jumpSpeed;    
+            }
         }
 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
