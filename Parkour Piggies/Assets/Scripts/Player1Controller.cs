@@ -8,27 +8,62 @@ public class Player1Controller : MonoBehaviour {
     public float walkSpeed = 8f;
     public float jumpSpeed = 10f;
     public float gravityScale = 0.25f;
-    //flag to keep track of whether a jump started
-    bool pressedJump = false;
+
+    private int maxHealth = 10;
+    private int startHealth;
+    private int currHealth;
+
+    public GameObject[] carrots;
+    public GameObject exit;
 
     CharacterController cc;
     private Vector3 moveDirection;
 
-    Rigidbody rb;
-    Collider coll;
-
     void Start()
     {
+        startHealth = maxHealth;
+        currHealth = startHealth;
+        
         cc = GetComponent<CharacterController>();
     }
 
     void Update()
     {
+        if (cc.transform.position.y < 0)
+        {
+            RemoveHealth();
+            Teleport();
+        }
+
         WalkHandler();
 
         JumpHandler();
 
         cc.Move(moveDirection * Time.deltaTime);
+    }
+
+    void Teleport()
+    {
+        cc.transform.position = exit.transform.position;
+    }
+
+    void RemoveHealth()
+    {
+        currHealth -= 1;
+        // if (currHealth == -1) end game
+
+        carrots[0].SetActive(currHealth >= 1);
+        carrots[1].SetActive(currHealth >= 2);
+        carrots[2].SetActive(currHealth >= 3);
+        carrots[3].SetActive(currHealth >= 4);
+        carrots[4].SetActive(currHealth >= 5);
+        carrots[5].SetActive(currHealth >= 6);
+        carrots[6].SetActive(currHealth >= 7);
+        carrots[7].SetActive(currHealth >= 8);
+        carrots[8].SetActive(currHealth >= 9);
+        carrots[9].SetActive(currHealth == 10);
+
+        if (currHealth > 10) currHealth = 10;
     }
 
     void WalkHandler()
