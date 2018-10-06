@@ -42,6 +42,16 @@ public class Player1Controller : MonoBehaviour {
         cc.Move(moveDirection * Time.deltaTime);
     }
 
+    void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("collided");
+        if (collision.gameObject.tag == "CollectCarrot2")
+        {
+            Destroy(collision.gameObject);
+            AddHealth();
+        }
+    }
+
     void Teleport()
     {
         cc.transform.position = exit.transform.position;
@@ -64,6 +74,24 @@ public class Player1Controller : MonoBehaviour {
         carrots[9].SetActive(currHealth == 10);
 
         if (currHealth > 10) currHealth = 10;
+    }
+
+    void AddHealth()
+    {
+        currHealth += 1;
+
+        carrots[0].SetActive(currHealth >= 1);
+        carrots[1].SetActive(currHealth >= 2);
+        carrots[2].SetActive(currHealth >= 3);
+        carrots[3].SetActive(currHealth >= 4);
+        carrots[4].SetActive(currHealth >= 5);
+        carrots[5].SetActive(currHealth >= 6);
+        carrots[6].SetActive(currHealth >= 7);
+        carrots[7].SetActive(currHealth >= 8);
+        carrots[8].SetActive(currHealth >= 9);
+        carrots[9].SetActive(currHealth == 10);
+
+        if (currHealth > 10) RemoveHealth();
     }
 
     void WalkHandler()
