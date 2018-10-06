@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CollectCarrot1
+  - CollectCarrot2
   layers:
   - Default
   - TransparentFX
