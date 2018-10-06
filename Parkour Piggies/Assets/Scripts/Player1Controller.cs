@@ -38,9 +38,13 @@ public class Player1Controller : MonoBehaviour {
 
     void JumpHandler()
     {
-        if (cc.isGrounded && Input.GetButtonDown("Jump"))
+        if (cc.isGrounded)
         {
-            moveDirection.y = jumpSpeed;
+            moveDirection.y = 0f;
+            if (Input.GetButtonDown("Jump"))
+            {
+                moveDirection.y = jumpSpeed;    
+            }
         }
 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
