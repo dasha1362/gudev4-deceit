@@ -24,6 +24,6 @@ public class Laser : MonoBehaviour
                 lr.SetPosition(1, hit.point);
             }
         }
-        else lr.SetPosition(1, transform.forward * 5000);
+        else lr.SetPosition(1, transform.forward);
     }
 }
