@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 10
-  jumpSpeed: 35
+  jumpSpeed: 40
   gravityScale: 0.1
   camera: {fileID: 99407813}
   fallSpeed: 20
@@ -1135,7 +1135,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4698581776033698, guid: f517f93ed6b1eaf4ba7af75048ffd366, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 50.279266
+      value: 45.2
       objectReference: {fileID: 0}
     - target: {fileID: 4698581776033698, guid: f517f93ed6b1eaf4ba7af75048ffd366, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1165,16 +1165,16 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 114440009787577684, guid: f517f93ed6b1eaf4ba7af75048ffd366,
-        type: 2}
-      propertyPath: camera
-      value: 
-      objectReference: {fileID: 569386671}
     - target: {fileID: 114136828489984586, guid: f517f93ed6b1eaf4ba7af75048ffd366,
         type: 2}
       propertyPath: camera
       value: 
       objectReference: {fileID: 99407813}
+    - target: {fileID: 114440009787577684, guid: f517f93ed6b1eaf4ba7af75048ffd366,
+        type: 2}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 569386671}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f517f93ed6b1eaf4ba7af75048ffd366, type: 2}
   m_IsPrefabAsset: 0
@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 10
-  jumpSpeed: 35
+  jumpSpeed: 40
   gravityScale: 0.1
   camera: {fileID: 569386671}
   fallSpeed: 20
