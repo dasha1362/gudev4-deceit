@@ -799,7 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 569386671}
   newPosition: {x: 20, y: -12, z: 20}
-  degreesToTurn: 270
+  degreesToTurn: 315
   playerTag: Player2
 --- !u!114 &996542455
 MonoBehaviour:
@@ -814,7 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 99407813}
   newPosition: {x: 20, y: -12, z: 20}
-  degreesToTurn: 270
+  degreesToTurn: 315
   playerTag: Player1
 --- !u!65 &996542456
 BoxCollider:
