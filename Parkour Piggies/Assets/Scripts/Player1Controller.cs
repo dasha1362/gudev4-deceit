@@ -50,6 +50,11 @@ public class Player1Controller : PlayerController
         {
             SceneManager.LoadScene(2);
         }
+        if (collision.gameObject.tag == "ToLevel3")
+        {
+            SceneManager.LoadScene(3);
+        }
+
     }
 
     void Teleport()
@@ -63,7 +68,7 @@ public class Player1Controller : PlayerController
     void RemoveHealth()
     {
         currHealth -= 1;
-        if (currHealth == 0) SceneManager.LoadScene(4); // endingscene p2 win
+        if (currHealth == 0) SceneManager.LoadScene(5); // endingscene p2 win
 
         carrots[0].SetActive(currHealth >= 1);
         carrots[1].SetActive(currHealth >= 2);
