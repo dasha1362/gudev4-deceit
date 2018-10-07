@@ -766,7 +766,7 @@ GameObject:
   - component: {fileID: 996542455}
   - component: {fileID: 996542454}
   m_Layer: 0
-  m_Name: CameraPanTrigger4 (1)
+  m_Name: CameraPanTrigger5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 569386671}
   newPosition: {x: 20, y: -12, z: 20}
-  degreesToTurn: 315
+  degreesToTurn: 225
   playerTag: Player2
 --- !u!114 &996542455
 MonoBehaviour:
@@ -814,7 +814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camera: {fileID: 99407813}
   newPosition: {x: 20, y: -12, z: 20}
-  degreesToTurn: 315
+  degreesToTurn: 225
   playerTag: Player1
 --- !u!65 &996542456
 BoxCollider:
