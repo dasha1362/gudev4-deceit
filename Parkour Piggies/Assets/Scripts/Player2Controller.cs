@@ -15,6 +15,10 @@ public class Player2Controller : PlayerController
     CharacterController cc;
     private Vector3 moveDirection;
 
+
+    private int doubleJumpCount;
+
+
     void Start()
     {
         startHealth = maxHealth;
@@ -54,7 +58,7 @@ public class Player2Controller : PlayerController
         cc.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         camera.offset = new Vector3(25.2F, -5F, 0.4F);
     }
-    
+
     void RemoveHealth()
     {
         currHealth -= 1;
@@ -103,15 +107,28 @@ public class Player2Controller : PlayerController
 
     void JumpHandler()
     {
-        if (cc.isGrounded)
-        {
+
+        if (cc.isGrounded) {
             moveDirection.y = 0f;
-            if (Input.GetButtonDown("P2_Jump"))
-            {
-                moveDirection.y = jumpSpeed;
-            }
+            doubleJumpCount = 0;
         }
 
-        moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
+
+        if (Input.GetButtonDown("P2_Jump") && doubleJumpCount < 2)
+        {
+            moveDirection.y = lowJumpSpeed;
+            doubleJumpCount += 1;
+        }
+
+        if (moveDirection.y < 0)
+        {
+            moveDirection.y = moveDirection.y + Physics.gravity.y * (fallSpeed - 1) * Time.deltaTime;
+        } else if (moveDirection.y > 0 && !Input.GetButtonDown("P2_Jump"))
+        {
+            moveDirection.y = moveDirection.y + Physics.gravity.y * (fallSpeed - 1) * Time.deltaTime;
+        }
+
+
+
     }
 }
