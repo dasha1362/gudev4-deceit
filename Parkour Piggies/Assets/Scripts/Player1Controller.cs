@@ -42,7 +42,7 @@ public class Player1Controller : PlayerController
     void OnTriggerEnter(Collider collision)
     {
         Debug.Log("collided");
-        if (collision.gameObject.tag == "CollectCarrot")
+        if (collision.gameObject.tag == "CollectCarrot2")
         {
             Destroy(collision.gameObject);
             AddHealth();
