@@ -49,7 +49,8 @@ public class Player1Controller : PlayerController
         if (collision.gameObject.tag == "ToLevel2")
         {
             SceneManager.LoadScene(2);
-        } else if (collision.gameObject.tag == "EndGame")
+        }
+        if (collision.gameObject.tag == "EndGame")
         {
             SceneManager.LoadScene(5);
         }
