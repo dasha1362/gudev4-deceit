@@ -712,7 +712,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 860255583}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 860255585}
+        m_MethodName: LoadScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &860255583
@@ -757,7 +768,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 860255580}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe20aa6ed97f4cb4b93b3d6d003bf6c9, type: 3}
+  m_Script: {fileID: 11500000, guid: 4795ff1f52819ee4b94ada2a93d71e91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &927637098
