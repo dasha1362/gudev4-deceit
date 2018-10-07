@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GoButton : MonoBehaviour {
+public class SceneLoader : MonoBehaviour {
 
-    private void OnMouseDown()
-    {
-        SceneManager.LoadScene("Level1");
-    }
-
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
 		
 	}
 	
@@ -19,4 +14,9 @@ public class GoButton : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    public void LoadScene(int level)
+    {
+        SceneManager.LoadScene(level);
+    }
 }
