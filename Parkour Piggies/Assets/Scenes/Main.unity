@@ -372,6 +372,8 @@ MonoBehaviour:
   walkSpeed: 8
   jumpSpeed: 60
   gravityScale: 0.1
+  camera: {fileID: 99407813}
+  exit: {fileID: 1563672569}
   carrots:
   - {fileID: 305968201}
   - {fileID: 1922319439}
@@ -383,7 +385,6 @@ MonoBehaviour:
   - {fileID: 1473076051}
   - {fileID: 10790104}
   - {fileID: 386222740}
-  exit: {fileID: 1563672569}
 --- !u!143 &382140825
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1051,6 +1052,8 @@ MonoBehaviour:
   walkSpeed: 8
   jumpSpeed: 35
   gravityScale: 0.1
+  camera: {fileID: 569386671}
+  exit: {fileID: 1563672569}
   carrots:
   - {fileID: 1835356875}
   - {fileID: 1240555809}
@@ -1062,7 +1065,6 @@ MonoBehaviour:
   - {fileID: 1072570756}
   - {fileID: 301480971}
   - {fileID: 1918520525}
-  exit: {fileID: 1563672569}
 --- !u!143 &1199544892
 CharacterController:
   m_ObjectHideFlags: 0

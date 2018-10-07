@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class Player1Controller : PlayerController
 {
-
     private int maxHealth = 10;
     private int startHealth;
     private int currHealth;
@@ -54,6 +53,8 @@ public class Player1Controller : PlayerController
     {
         
         cc.transform.position = exit.transform.position;
+        cc.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        camera.offset = new Vector3(25.2F, -5F, 0.4F);
     }
 
     void RemoveHealth()
@@ -78,7 +79,7 @@ public class Player1Controller : PlayerController
     void AddHealth()
     {
         currHealth += 1;
-        
+
         carrots[0].SetActive(currHealth >= 1);
         carrots[1].SetActive(currHealth >= 2);
         carrots[2].SetActive(currHealth >= 3);

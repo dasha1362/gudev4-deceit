@@ -40,9 +40,11 @@ public class Player2Controller : PlayerController
 
     void Teleport()
     {
-        cc.transform.position = exit.transform.position;
+        cc.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        cc.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        camera.offset = new Vector3(25.2F, -5F, 0.4F);
     }
-
+    
     void RemoveHealth()
     {
         currHealth -= 1;
