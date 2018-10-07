@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class Player1Controller : PlayerController
 {
@@ -43,10 +44,9 @@ public class Player1Controller : PlayerController
     void OnTriggerEnter(Collider collision)
     {
         Debug.Log("collided");
-        if (collision.gameObject.tag == "CollectCarrot")
+        if (collision.gameObject.tag == "ToLevel2")
         {
-            Destroy(collision.gameObject);
-            AddHealth();
+            SceneManager.LoadScene(2);
         }
     }
 

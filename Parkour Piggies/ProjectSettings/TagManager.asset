@@ -8,6 +8,7 @@ TagManager:
   - CollectCarrot2
   - Player1
   - Player2
+  - ToLevel2
   layers:
   - Default
   - TransparentFX
