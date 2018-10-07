@@ -823,7 +823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1043012966}
-  newPosition: {x: -20, y: -10, z: 0}
+  newPosition: {x: -25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player2
 --- !u!114 &399494733
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1255910169}
-  newPosition: {x: -20, y: -10, z: 0}
+  newPosition: {x: -25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player1
 --- !u!65 &399494734
@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1043012966}
-  newPosition: {x: 0, y: -5, z: 20}
+  newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player2
 --- !u!114 &673125693
@@ -1186,7 +1186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1255910169}
-  newPosition: {x: 0, y: -5, z: 20}
+  newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player1
 --- !u!65 &673125694
@@ -2133,7 +2133,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 75.75958
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -2226,7 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1043012966}
-  newPosition: {x: 0, y: -10, z: -20}
+  newPosition: {x: 0, y: -10, z: -25}
   degreesToTurn: 270
   playerTag: Player2
 --- !u!114 &1097428687
@@ -2241,7 +2241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1255910169}
-  newPosition: {x: 0, y: -10, z: -20}
+  newPosition: {x: 0, y: -10, z: -25}
   degreesToTurn: 270
   playerTag: Player1
 --- !u!65 &1097428688
@@ -2642,7 +2642,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 76.24031
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -3163,7 +3163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1043012966}
-  newPosition: {x: 0, y: -5, z: 20}
+  newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player2
 --- !u!114 &1809381015
@@ -3179,7 +3179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1255910169}
-  newPosition: {x: 0, y: -5, z: 20}
+  newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player1
 --- !u!65 &1809381016
@@ -3598,7 +3598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1043012966}
-  newPosition: {x: 20, y: -10, z: 0}
+  newPosition: {x: 25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player2
 --- !u!114 &2035524102
@@ -3613,7 +3613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camera: {fileID: 1255910169}
-  newPosition: {x: 20, y: -10, z: 0}
+  newPosition: {x: 25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player1
 --- !u!65 &2035524103
