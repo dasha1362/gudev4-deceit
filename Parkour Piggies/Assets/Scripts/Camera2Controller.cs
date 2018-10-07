@@ -1,33 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
-public class Camera2Controller : MonoBehaviour {
+public class Camera2Controller : CameraController {
+
 
 	public Transform target;
-	public Vector3 offset;
+	
 
-
-	public float rotateSpeed;
-	
-	
-	
-	// Use this for initialization
-	void Start ()
+	void LateUpdate ()
 	{
-		offset = target.position - transform.position;
-	}
-	
-	// Update is called once per frame
-	void Update ()
-	{
-		if (Input.GetKey(KeyCode.E))
-		{
-			target.Rotate(0, rotateSpeed, 0);	
-		}
-		
 		transform.position = target.position - offset;
-		
 		transform.LookAt(target);
 	}
 }

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Player1Controller : MonoBehaviour {
-
-    public float walkSpeed = 8f;
-    public float jumpSpeed = 10f;
-    public float gravityScale = 0.25f;
+public class Player1Controller : MonoBehaviour
+{
+    public float walkSpeed; 
+    public float jumpSpeed;
+    public float gravityScale;
 
     private int maxHealth = 10;
     private int startHealth;
@@ -23,7 +23,7 @@ public class Player1Controller : MonoBehaviour {
     {
         startHealth = maxHealth;
         currHealth = startHealth;
-        
+
         cc = GetComponent<CharacterController>();
     }
 
@@ -109,11 +109,10 @@ public class Player1Controller : MonoBehaviour {
             moveDirection.y = 0f;
             if (Input.GetButtonDown("Jump"))
             {
-                moveDirection.y = jumpSpeed;    
+                moveDirection.y = jumpSpeed;
             }
         }
 
         moveDirection.y = moveDirection.y + (Physics.gravity.y * gravityScale);
     }
-
 }

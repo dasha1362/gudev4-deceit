@@ -5,12 +5,9 @@ using UnityEngine.EventSystems;
 
 public class Player2Controller : MonoBehaviour
 {
-
     public float walkSpeed;
     public float jumpSpeed;
     public float gravityScale;
-    //flag to keep track of whether a jump started
-    bool pressedJump = false;
 
     private int maxHealth = 10;
     private int startHealth;
@@ -71,7 +68,11 @@ public class Player2Controller : MonoBehaviour
 
     void WalkHandler()
     {
-        moveDirection = new Vector3(Input.GetAxis("P2_Horizontal") * walkSpeed, moveDirection.y, Input.GetAxis("P2_Vertical") * walkSpeed);
+        float yStore = moveDirection.y;
+        moveDirection = transform.forward * Input.GetAxis("P2_Vertical") +
+                        transform.right * Input.GetAxis("P2_Horizontal");
+        moveDirection = moveDirection.normalized * walkSpeed;
+        moveDirection.y = yStore;
     }
 
     void JumpHandler()
@@ -81,7 +82,7 @@ public class Player2Controller : MonoBehaviour
             moveDirection.y = 0f;
             if (Input.GetButtonDown("P2_Jump"))
             {
-                moveDirection.y = jumpSpeed;    
+                moveDirection.y = jumpSpeed;
             }
         }
 

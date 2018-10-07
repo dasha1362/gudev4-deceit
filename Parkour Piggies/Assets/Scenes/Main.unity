@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 336409983}
   - component: {fileID: 336409982}
   - component: {fileID: 336409981}
+  - component: {fileID: 336409985}
   m_Layer: 0
   m_Name: CameraPanTrigger3
   m_TagString: Untagged
@@ -263,6 +264,7 @@ MonoBehaviour:
   camera: {fileID: 99407813}
   newPosition: {x: 0, y: -10, z: -20}
   degreesToTurn: 270
+  playerTag: Player1
 --- !u!65 &336409982
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -320,6 +322,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 336409979}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &336409985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336409979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a1231b8d7744e7b433ee695d77895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 569386671}
+  newPosition: {x: 0, y: -10, z: -20}
+  degreesToTurn: 270
+  playerTag: Player2
 --- !u!1 &382140823
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +352,7 @@ GameObject:
   - component: {fileID: 382140828}
   m_Layer: 0
   m_Name: piggie 1
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -408,7 +425,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 382140823}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 35, y: 55, z: 134}
+  m_LocalPosition: {x: 35, y: 55.54, z: 134}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 1214111920}
@@ -443,10 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d836e798f07a946f88a6a6d9450ab5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 382140827}
   offset: {x: 25.2, y: -5, z: 0.4}
-  rotateSpeed: 10
-  pivot: {fileID: 0}
+  target: {fileID: 382140827}
 --- !u!1001 &462549003
 Prefab:
   m_ObjectHideFlags: 0
@@ -491,9 +506,30 @@ Prefab:
       propertyPath: target
       value: 
       objectReference: {fileID: 1199544894}
+    - target: {fileID: 114514831731641328, guid: f594e21f961ea2943b488d2ee7532b51,
+        type: 2}
+      propertyPath: offset.x
+      value: 25.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514831731641328, guid: f594e21f961ea2943b488d2ee7532b51,
+        type: 2}
+      propertyPath: offset.y
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114514831731641328, guid: f594e21f961ea2943b488d2ee7532b51,
+        type: 2}
+      propertyPath: offset.z
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f594e21f961ea2943b488d2ee7532b51, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &569386671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114514831731641328, guid: f594e21f961ea2943b488d2ee7532b51,
+    type: 2}
+  m_PrefabInternal: {fileID: 462549003}
+  m_Script: {fileID: 11500000, guid: 7349f8755cb0144adab29c58f29ff31b, type: 3}
 --- !u!1 &631473462 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1294051788117530, guid: f594e21f961ea2943b488d2ee7532b51,
@@ -504,6 +540,26 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1452134666437908, guid: 5199af8501ad54848ae668815961e94e,
     type: 2}
   m_PrefabInternal: {fileID: 1355322066}
+--- !u!1 &891590678 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1123174193016354, guid: 7adf19cb0a173427387d8f3b2ec08d06,
+    type: 2}
+  m_PrefabInternal: {fileID: 984843295}
+--- !u!114 &891590684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 891590678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a1231b8d7744e7b433ee695d77895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 569386671}
+  newPosition: {x: 0, y: -5, z: 20}
+  degreesToTurn: 270
+  playerTag: Player2
 --- !u!1 &918416847 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1206633049496138, guid: f594e21f961ea2943b488d2ee7532b51,
@@ -528,6 +584,22 @@ MonoBehaviour:
   camera: {fileID: 99407813}
   newPosition: {x: -20, y: -10, z: 0}
   degreesToTurn: 270
+  playerTag: Player1
+--- !u!114 &932883358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 932883352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a1231b8d7744e7b433ee695d77895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 569386671}
+  newPosition: {x: -20, y: -10, z: 0}
+  degreesToTurn: 270
+  playerTag: Player2
 --- !u!1001 &956431675
 Prefab:
   m_ObjectHideFlags: 0
@@ -669,6 +741,11 @@ Prefab:
         type: 2}
       propertyPath: newPosition.z
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114156047098456034, guid: 7adf19cb0a173427387d8f3b2ec08d06,
+        type: 2}
+      propertyPath: playerTag
+      value: Player1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114901523610791970, guid: 7adf19cb0a173427387d8f3b2ec08d06, type: 2}
@@ -832,7 +909,7 @@ GameObject:
   - component: {fileID: 1199544891}
   m_Layer: 0
   m_Name: Piggie 2
-  m_TagString: Untagged
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -905,7 +982,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1199544890}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 38, y: 55, z: 131}
+  m_LocalPosition: {x: 38, y: 55.43, z: 131}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 1158436041}
@@ -1190,6 +1267,7 @@ GameObject:
   - component: {fileID: 1819314036}
   - component: {fileID: 1819314035}
   - component: {fileID: 1819314034}
+  - component: {fileID: 1819314038}
   m_Layer: 0
   m_Name: CameraPanTrigger4
   m_TagString: Untagged
@@ -1225,6 +1303,7 @@ MonoBehaviour:
   camera: {fileID: 99407813}
   newPosition: {x: 20, y: -10, z: 0}
   degreesToTurn: 270
+  playerTag: Player1
 --- !u!65 &1819314035
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1282,6 +1361,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819314032}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1819314038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1819314032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a1231b8d7744e7b433ee695d77895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 569386671}
+  newPosition: {x: 20, y: -10, z: 0}
+  degreesToTurn: 270
+  playerTag: Player2
 --- !u!1 &1835356875 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1280178932942288, guid: f594e21f961ea2943b488d2ee7532b51,

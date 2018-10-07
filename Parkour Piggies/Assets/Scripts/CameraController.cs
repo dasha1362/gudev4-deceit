@@ -1,7 +1,9 @@
+using UnityEngine;
+
 namespace DefaultNamespace
 {
-    public interface CameraController
+    public abstract class CameraController : MonoBehaviour
     {
-        
+        public Vector3 offset;
     }
 }
