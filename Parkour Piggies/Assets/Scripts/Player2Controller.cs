@@ -6,9 +6,9 @@ using UnityEngine.EventSystems;
 
 public class Player2Controller : PlayerController
 {
-    int maxHealth = 10;
-    int startHealth;
-    int currHealth;
+    private int maxHealth = 10;
+    private int startHealth;
+    private int currHealth;
 
     public GameObject[] carrots;
 
@@ -38,9 +38,19 @@ public class Player2Controller : PlayerController
         cc.Move(moveDirection * Time.deltaTime);
     }
 
+    void OnTriggerEnter(Collider collision)
+    {
+        Debug.Log("collided");
+        if (collision.gameObject.tag == "CollectCarrot")
+        {
+            Destroy(collision.gameObject);
+            AddHealth();
+        }
+    }
+
     void Teleport()
     {
-        cc.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        cc.transform.position = exit.transform.position;
         cc.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         camera.offset = new Vector3(25.2F, -5F, 0.4F);
     }
@@ -63,6 +73,25 @@ public class Player2Controller : PlayerController
 
         if (currHealth > 10) currHealth = 10;
     }
+
+    void AddHealth()
+    {
+        currHealth += 1;
+
+        carrots[0].SetActive(currHealth >= 1);
+        carrots[1].SetActive(currHealth >= 2);
+        carrots[2].SetActive(currHealth >= 3);
+        carrots[3].SetActive(currHealth >= 4);
+        carrots[4].SetActive(currHealth >= 5);
+        carrots[5].SetActive(currHealth >= 6);
+        carrots[6].SetActive(currHealth >= 7);
+        carrots[7].SetActive(currHealth >= 8);
+        carrots[8].SetActive(currHealth >= 9);
+        carrots[9].SetActive(currHealth == 10);
+
+        if (currHealth > 10) RemoveHealth();
+    }
+
 
     void WalkHandler()
     {
