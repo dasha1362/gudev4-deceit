@@ -20,12 +20,15 @@ public class Player2Controller : PlayerController
     private int doubleJumpCount;
 
 
+
     void Start()
     {
         startHealth = maxHealth;
         currHealth = startHealth;
 
         cc = GetComponent<CharacterController>();
+
+        moveDirection.y = fallSpeed;
     }
 
     void Update()
@@ -108,9 +111,10 @@ public class Player2Controller : PlayerController
     void JumpHandler()
     {
 
-        if (cc.isGrounded) {
-            moveDirection.y = 0f;
+        if (cc.isGrounded)
+        {
             doubleJumpCount = 0;
+            moveDirection.y = -0.5f;
         }
 
 

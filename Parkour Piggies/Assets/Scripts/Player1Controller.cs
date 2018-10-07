@@ -24,6 +24,8 @@ public class Player1Controller : PlayerController
         currHealth = startHealth;
 
         cc = GetComponent<CharacterController>();
+
+        moveDirection.y = fallSpeed;
     }
 
     void Update()
@@ -106,7 +108,7 @@ public class Player1Controller : PlayerController
     void JumpHandler()
     {
         if (cc.isGrounded) {
-            moveDirection.y = 0f;
+            moveDirection.y = -0.5f;
             doubleJumpCount = 0;
         }
 
