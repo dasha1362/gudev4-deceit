@@ -373,10 +373,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c294e3b35fbdd2949b705a36a060374b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 8
+  walkSpeed: 25
   jumpSpeed: 35
-  gravityScale: 0.22
+  gravityScale: 2
   camera: {fileID: 1043012966}
+  fallSpeed: 20
+  lowJumpSpeed: 60
   exit: {fileID: 360003553}
   carrots:
   - {fileID: 323636522}
@@ -826,6 +828,7 @@ MonoBehaviour:
   newPosition: {x: -25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player2
+  targetRotation: 0
 --- !u!114 &399494733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -841,6 +844,7 @@ MonoBehaviour:
   newPosition: {x: -25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player1
+  targetRotation: 0
 --- !u!65 &399494734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1173,6 +1177,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player2
+  targetRotation: 0
 --- !u!114 &673125693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,6 +1194,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player1
+  targetRotation: 0
 --- !u!65 &673125694
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1772,6 +1778,7 @@ MonoBehaviour:
   newPosition: {x: -20, y: -12, z: 20}
   degreesToTurn: 225
   playerTag: Player2
+  targetRotation: 0
 --- !u!114 &887111422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1787,6 +1794,7 @@ MonoBehaviour:
   newPosition: {x: -20, y: -12, z: 20}
   degreesToTurn: 225
   playerTag: Player1
+  targetRotation: 0
 --- !u!65 &887111423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1931,10 +1939,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52e4563b7ee9481439ef696e05901e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 8
-  jumpSpeed: 85
-  gravityScale: 0.22
+  walkSpeed: 25
+  jumpSpeed: 35
+  gravityScale: 2
   camera: {fileID: 1255910169}
+  fallSpeed: 20
+  lowJumpSpeed: 60
   exit: {fileID: 360003553}
   carrots:
   - {fileID: 790919633}
@@ -2229,6 +2239,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: -10, z: -25}
   degreesToTurn: 270
   playerTag: Player2
+  targetRotation: 0
 --- !u!114 &1097428687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,6 +2255,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: -10, z: -25}
   degreesToTurn: 270
   playerTag: Player1
+  targetRotation: 0
 --- !u!65 &1097428688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3166,6 +3178,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player2
+  targetRotation: 0
 --- !u!114 &1809381015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3182,6 +3195,7 @@ MonoBehaviour:
   newPosition: {x: 0, y: -10, z: 25}
   degreesToTurn: 270
   playerTag: Player1
+  targetRotation: 0
 --- !u!65 &1809381016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3601,6 +3615,7 @@ MonoBehaviour:
   newPosition: {x: 25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player2
+  targetRotation: 0
 --- !u!114 &2035524102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3616,6 +3631,7 @@ MonoBehaviour:
   newPosition: {x: 25, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player1
+  targetRotation: 0
 --- !u!65 &2035524103
 BoxCollider:
   m_ObjectHideFlags: 0

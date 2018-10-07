@@ -8,12 +8,13 @@ namespace DefaultNamespace
         public float jumpSpeed;
         public float gravityScale;
         public CameraController camera;
-
+        public float fallSpeed;
+        public float lowJumpSpeed;
 
         public GameObject exit;
 
 
-        
+
 
     }
 }
