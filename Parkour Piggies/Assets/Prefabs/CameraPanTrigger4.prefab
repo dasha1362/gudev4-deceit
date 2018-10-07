@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65935381013206912}
   - component: {fileID: 114844937241560428}
   - component: {fileID: 114227974029787250}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraPanTrigger4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 65140438906881654}
   - component: {fileID: 114136828489984586}
   - component: {fileID: 114440009787577684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CameraPanTrigger2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   newPosition: {x: -20, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player1
-  targetRotation: 180
+  targetRotation: -180
 --- !u!114 &114440009787577684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,4 +129,4 @@ MonoBehaviour:
   newPosition: {x: -20, y: -10, z: 0}
   degreesToTurn: 270
   playerTag: Player2
-  targetRotation: 180
+  targetRotation: -180
