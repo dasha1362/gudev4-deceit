@@ -63,7 +63,7 @@ public class Player1Controller : PlayerController
     void RemoveHealth()
     {
         currHealth -= 1;
-        // if (currHealth == -1) end game
+        if (currHealth == 0) SceneManager.LoadScene(4); // endingscene p2 win
 
         carrots[0].SetActive(currHealth >= 1);
         carrots[1].SetActive(currHealth >= 2);
