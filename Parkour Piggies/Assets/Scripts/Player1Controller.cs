@@ -16,12 +16,15 @@ public class Player1Controller : PlayerController
     CharacterController cc;
     private Vector3 moveDirection;
 
+	private AudioSource oink;
+
     void Start()
     {
         startHealth = maxHealth;
         currHealth = startHealth;
 
         cc = GetComponent<CharacterController>();
+		oink = GetComponent<AudioSource> ();
     }
 
     void Update()
@@ -55,6 +58,7 @@ public class Player1Controller : PlayerController
         cc.transform.position = exit.transform.position;
         cc.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         camera.offset = new Vector3(25.2F, -5F, 0.4F);
+		oink.Play (0);
     }
 
     void RemoveHealth()
