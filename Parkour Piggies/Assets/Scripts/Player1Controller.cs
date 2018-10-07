@@ -1,20 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Player1Controller : MonoBehaviour
+public class Player1Controller : PlayerController
 {
-    public float walkSpeed; 
-    public float jumpSpeed;
-    public float gravityScale;
 
     private int maxHealth = 10;
     private int startHealth;
     private int currHealth;
 
     public GameObject[] carrots;
-    public GameObject exit;
+
 
     CharacterController cc;
     private Vector3 moveDirection;
@@ -54,6 +52,7 @@ public class Player1Controller : MonoBehaviour
 
     void Teleport()
     {
+        
         cc.transform.position = exit.transform.position;
     }
 
@@ -79,7 +78,7 @@ public class Player1Controller : MonoBehaviour
     void AddHealth()
     {
         currHealth += 1;
-
+        
         carrots[0].SetActive(currHealth >= 1);
         carrots[1].SetActive(currHealth >= 2);
         carrots[2].SetActive(currHealth >= 3);

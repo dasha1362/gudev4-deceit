@@ -1,20 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Player2Controller : MonoBehaviour
+public class Player2Controller : PlayerController
 {
-    public float walkSpeed;
-    public float jumpSpeed;
-    public float gravityScale;
-
-    private int maxHealth = 10;
-    private int startHealth;
-    private int currHealth;
+    int maxHealth = 10;
+    int startHealth;
+    int currHealth;
 
     public GameObject[] carrots;
-    public GameObject exit;
 
     CharacterController cc;
     private Vector3 moveDirection;
