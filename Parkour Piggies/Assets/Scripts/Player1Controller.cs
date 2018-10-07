@@ -54,10 +54,7 @@ public class Player1Controller : PlayerController
         {
             SceneManager.LoadScene(3);
         }
-        if (collision.gameObject.tag == "EndGame")
-        {
-            SceneManager.LoadScene(6);
-        }
+
     }
 
     void Teleport()
@@ -71,7 +68,7 @@ public class Player1Controller : PlayerController
     void RemoveHealth()
     {
         currHealth -= 1;
-        if (currHealth == 0) SceneManager.LoadScene(4); // endingscene p2 win
+        if (currHealth == 0) SceneManager.LoadScene(5); // endingscene p2 win
 
         carrots[0].SetActive(currHealth >= 1);
         carrots[1].SetActive(currHealth >= 2);

@@ -53,10 +53,9 @@ public class Player2ControllerLvl3 : PlayerController
 
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log("collided");
-        if (collision.gameObject.tag == "ToLevel2")
+        if (collision.gameObject.tag == "EndGame")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(6);
         }
     }
 
@@ -70,7 +69,7 @@ public class Player2ControllerLvl3 : PlayerController
     void RemoveHealth()
     {
         currHealth -= 1;
-        // if (currHealth == -1) end game
+        if (currHealth == 0) SceneManager.LoadScene(4);
 
         carrots[0].SetActive(currHealth >= 1);
         carrots[1].SetActive(currHealth >= 2);
