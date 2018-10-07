@@ -12,7 +12,6 @@ public class Player1Controller : PlayerController
 
     public GameObject[] carrots;
 
-
     CharacterController cc;
     private Vector3 moveDirection;
 
@@ -42,7 +41,7 @@ public class Player1Controller : PlayerController
     void OnTriggerEnter(Collider collision)
     {
         Debug.Log("collided");
-        if (collision.gameObject.tag == "CollectCarrot2")
+        if (collision.gameObject.tag == "CollectCarrot")
         {
             Destroy(collision.gameObject);
             AddHealth();
